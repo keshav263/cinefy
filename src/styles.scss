@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+$background-color: #152023;
+$tag-color-primary: red;
+$tag-color-contrast: purple;
+
+html,
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $background-color;
+  display: block;
+}
+
+main {
+  display: block !important;
+}
+
+.primary-tag {
+  font-weight: bolder;
+  color: $tag-color-primary;
+  text-transform: uppercase;
+  padding: 10px 0;
+  letter-spacing: 3px;
+  margin: 0;
+  @media (max-width: 720px) {
+    font-size: 0.5rem;
+  }
+}
+
+.title {
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 4rem;
+  font-weight: lighter;
+  display: inline-block;
+  margin: 0;
+  @media (max-width: 1080px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 720px) {
+    font-size: 2rem;
+  }
+}
+
+.bold-title {
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 4rem;
+  display: inline-block;
+  margin: 0;
+  @media (max-width: 1080px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 720px) {
+    font-size: 2rem;
+  }
+}
