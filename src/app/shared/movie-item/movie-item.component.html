@@ -1,0 +1,6 @@
+<div class="container">
+  <img [src]="'https://image.tmdb.org/t/p/original' + movie.poster_path" />
+  <p class="name">{{ movie.title }}</p>
+  <p class="text">Imdb Rating {{ movie.vote_average }}</p>
+  <p class="text">Released {{ movie.release_date }}</p>
+</div>

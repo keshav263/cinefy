@@ -1,0 +1,15 @@
+<div class="container">
+  <img
+    class="big-poster"
+    [src]="'https://image.tmdb.org/t/p/original' + movies[0].poster_path"
+  />
+  <div class="details-container">
+    <p class="red-tag">Coming Soon</p>
+    <p class="big-name">
+      {{ movies[0].title }}
+    </p>
+    <p class="big-text">
+      {{ movies[0].overview }}
+    </p>
+  </div>
+</div>

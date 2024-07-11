@@ -1,9 +1,16 @@
 <section class="container">
-  <section class="subcontainer">
+  <section>
     <p class="primary-tag">featured</p>
     <span class="title">
       <span class="bold-title">Now</span>
       Showing
     </span>
+    <div *ngIf="loading">
+      <p style="color: #fff">Loading....</p>
+    </div>
+    <div *ngIf="!loading" class="main-container">
+      <movie-item *ngFor="let movie of movies" [movie]="movie"></movie-item>
+    </div>
+    <coming-soon></coming-soon>
   </section>
 </section>

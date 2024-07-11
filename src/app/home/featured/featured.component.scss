@@ -27,3 +27,25 @@
     height: 32rem;
   }
 }
+
+.main-container {
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  height: 35rem;
+  white-space: nowrap;
+  width: 95%;
+  overflow-x: scroll;
+  overflow-y: visible;
+  @media (max-width: 1080px) {
+    height: 32rem;
+  }
+  @media (max-width: 720px) {
+    padding-left: 1rem;
+  }
+  @media (max-width: 480px) {
+    height: 32rem;
+  }
+}

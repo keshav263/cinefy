@@ -1,0 +1,63 @@
+$background-color: #152023;
+$tag-color-primary: red;
+$tag-color-contrast: purple;
+
+.container {
+  width: 260px;
+  overflow: visible;
+  height: 400px;
+  margin: 20px 45px 80px 0px;
+  display: inline-block;
+  background: $background-color;
+  @media (max-width: 1080px) {
+    width: 230px;
+    height: 350px;
+  }
+  @media (max-width: 480px) {
+    width: 180px;
+    height: 300px;
+  }
+  cursor: pointer;
+}
+
+img {
+  width: 250px;
+  height: 350px;
+  border-radius: 0.2rem;
+  @media (max-width: 1080px) {
+    width: 220px;
+    height: 300px;
+  }
+  @media (max-width: 480px) {
+    width: 170px;
+    height: 250px;
+  }
+}
+
+.name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin: 5px 0;
+  width: 260px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @media (max-width: 480px) {
+    letter-spacing: 1px;
+    width: 160px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+.text {
+  color: #fff;
+  margin: 5px 0;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
