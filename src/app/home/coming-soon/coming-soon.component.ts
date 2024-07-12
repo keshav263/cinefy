@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { Movie } from '../../models/movie';
 import { MoviesService } from '../../services/movie.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'coming-soon',
   templateUrl: 'coming-soon.component.html',
   styleUrls: ['coming-soon.component.scss'],
   standalone: true,
+  imports:[MatButtonModule]
 })
 export class ComingSoonComponent {
   public movies: Movie[] = [];

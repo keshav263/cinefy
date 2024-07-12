@@ -4,13 +4,14 @@ import { Movie } from '../../models/movie';
 import { MovieItemComponent } from '../../shared/movie-item/movie-item.component';
 import { NgFor, NgIf } from '@angular/common';
 import { ComingSoonComponent } from '../coming-soon/coming-soon.component';
+import { AllShowTimesComponent } from '../all-show-times/all-show-times.component';
 
 @Component({
   selector: 'featured-movies',
   templateUrl: './featured.component.html',
   styleUrls: ['./featured.component.scss'],
   standalone: true,
-  imports: [MovieItemComponent, NgFor, NgIf, ComingSoonComponent],
+  imports: [MovieItemComponent, NgFor, NgIf, ComingSoonComponent,AllShowTimesComponent],
 })
 export class FeatureComponent implements OnInit {
   public movies: Movie[] = [];

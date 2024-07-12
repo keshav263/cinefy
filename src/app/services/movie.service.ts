@@ -44,6 +44,7 @@ export class MoviesService {
             (movie) =>
               new Movie(
                 movie.adult,
+                movie.genre_ids,
                 movie.backdrop_path,
                 movie.id,
                 movie.original_title,
@@ -83,6 +84,7 @@ export class MoviesService {
             (movie) =>
               new Movie(
                 movie.adult,
+                movie.genre_ids,
                 movie.backdrop_path,
                 movie.id,
                 movie.original_title,

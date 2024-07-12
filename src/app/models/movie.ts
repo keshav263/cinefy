@@ -1,6 +1,7 @@
 export class Movie {
   constructor(
     public adult: boolean,
+    public genre_ids:number[],
     public backdrop_path: string,
     public id: number,
     public original_title: string,

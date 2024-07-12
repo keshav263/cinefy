@@ -1,0 +1,144 @@
+.container{
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	@media (max-width: 480px) {
+		flex-direction: column;
+	}
+}
+
+.details-container{
+    width: 30%;
+	@media (max-width: 480px) {
+		width: 80%;
+		margin-bottom: 6rem;
+	}
+}
+
+.blue-tag{
+    font-weight: bolder;
+	text-transform: uppercase;
+	padding: 10px 0;
+	letter-spacing: 3px;
+	margin: 0;
+    color: #694cc9;
+	width: 100%;
+	word-wrap: break-word;
+	@media (max-width: 1080px) {
+		font-size: 0.8rem;
+	}
+	@media (max-width: 855px) {
+		font-size: 0.7rem;
+	}
+	@media (max-width: 720px) {
+		font-size: 0.5rem;
+	}
+}
+
+.type{
+    color: #fff;
+	letter-spacing: 3px;
+	font-size: 4rem;
+	font-weight: lighter;
+	display: inline-block;
+    line-height: 1;
+	margin: 0;
+	@media (max-width: 1080px) {
+		font-size: 3rem;
+	}
+	@media (max-width: 720px) {
+		font-size: 2rem;
+	}
+}
+
+.bold-type{
+    font-weight: bold;
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 4rem;
+	display: inline-block;
+	margin: 0;
+	@media (max-width: 1080px) {
+		font-size: 3rem;
+	}
+	@media (max-width: 720px) {
+		font-size: 2rem;
+	}
+}
+
+.big-text{
+    font-weight: lighter;
+	font-size: 0.9rem;
+	letter-spacing: 2px;
+	line-height: 20px;
+	color: #fff;
+	margin: 5px 0;
+	@media (max-width: 720px) {
+		font-size: 0.7rem;
+	}
+}
+
+.extra-spacing-container{
+    border: 10px black solid;
+	z-index: 1;
+	width: 40%;
+	@media (max-width: 480px) {
+		width: 80%;
+	}
+}
+
+.name{
+    font-weight: bold;
+	color: #fff;
+	font-size: 1.3rem;
+	letter-spacing: 2px;
+	margin: 5px 0;
+	@media (max-width: 1080px) {
+		font-size: 1rem;
+	}
+	@media (max-width: 855px) {
+		font-size: 0.9rem;
+	}
+	@media (max-width: 720px) {
+		font-size: 0.7rem;
+	}
+}
+
+
+.image{
+    width: 35%;
+	height: 15%;
+	object-fit: cover;
+	filter: opacity(45%);
+	transform: translateY(-2rem);
+	background: linear-gradient(to bottom, rgba(256, 256, 256, 0), #000),
+		url("https://image.freepik.com/free-vector/elegant-blurry-red-bokeh-lights-background_1017-25385.jpg");
+	position: absolute;
+	right: 0;
+	@media (max-width: 480px) {
+		width: 75%;
+		height: 15%;
+		transform: translateY(5rem);
+	}
+}
+
+
+.shows-container{
+    display: flex;
+	width: 100%;
+	flex-direction: column;
+	border: 0.3rem solid #1e114a;
+	padding: 2rem 4rem 2rem 2rem;
+	background: #000;
+	z-index: 1;
+	box-sizing: border-box;
+	position: relative;
+	@media (max-width: 1080px) {
+		padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+	}
+	@media (max-width: 855px) {
+		padding: 1.5rem 3rem 1.5rem 1rem;
+	}
+}

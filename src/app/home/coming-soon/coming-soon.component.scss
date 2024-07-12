@@ -78,3 +78,68 @@
   }
   padding: 20px 0;
 }
+
+.red-contained{
+  margin-top: 10px;
+	color: #fff;
+	background: red;
+	letter-spacing: 3px;
+	width: 60%;
+	@media (max-width: 1080px) {
+		padding: 0.5rem 1rem;
+		letter-spacing: 2px;
+	}
+	@media (max-width: 855px) {
+		padding: 0.2rem 0.7rem;
+		letter-spacing: 0;
+		font-size: 0.7rem !important;
+		width: 50%;
+	}
+	@media (max-width: 720px) {
+		padding: 0.1rem 0.4rem;
+		font-size: 0.6rem !important;
+		width: 60%;
+	}
+	@media (max-width: 480px) {
+		padding: 0.2rem 0.7rem;
+		letter-spacing: 0;
+		font-size: 0.7rem !important;
+		width: 50%;
+	}
+	@media (max-width: 380px) {
+		width: 60%;
+	}
+}
+
+.red-border{
+  margin-top: 10px;
+	color: #fff;
+	border-color: #702123;
+	letter-spacing: 1px;
+	font-weight: 500;
+	width: 80%;
+	padding: 0.8rem 1.8rem;
+	@media (max-width: 1080px) {
+		padding: 0.5rem 1rem;
+	}
+	@media (max-width: 855px) {
+		padding: 0.2rem 0.7rem;
+		letter-spacing: 0;
+		font-size: 0.8rem !important;
+		width: 60%;
+	}
+	@media (max-width: 720px) {
+		padding: 0.1rem 0.4rem;
+		font-size: 0.7rem !important;
+		width: 80%;
+	}
+	@media (max-width: 480px) {
+		padding: 0.2rem 0.7rem;
+		letter-spacing: 0;
+		font-size: 0.8rem !important;
+		width: 60%;
+	}
+	@media (max-width: 380px) {
+		width: 80%;
+	}
+}

@@ -3,4 +3,7 @@
   <p class="name">{{ movie.title }}</p>
   <p class="text">Imdb Rating {{ movie.vote_average }}</p>
   <p class="text">Released {{ movie.release_date }}</p>
+  <button mat-button (click)="goToMovie(movie.id)">
+		View
+	</button>
 </div>
