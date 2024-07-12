@@ -1,0 +1,11 @@
+.container{
+    background-color: #888;
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	filter: grayscale(30%);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	z-index: 1;
+}
