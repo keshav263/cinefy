@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Movie } from '../../models/movie';
 import { MoviesService } from '../../services/movie.service';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'coming-soon',
@@ -15,7 +16,7 @@ export class ComingSoonComponent {
   public errorMessage: string | null = null;
   public loading = true;
 
-  constructor(public movieService: MoviesService) {}
+  constructor(public movieService: MoviesService,public router:Router) {}
 
   ngOnInit(): void {
     // Subscribe to nowShowing$ to get updates
@@ -33,4 +34,10 @@ export class ComingSoonComponent {
       this.loading = loading;
     });
   }
+
+  goToComingSoon(){
+    console.log("here")
+    this.router.navigate(["/movies"],{queryParams:{comingSoon:true}})
+  }
+
 }

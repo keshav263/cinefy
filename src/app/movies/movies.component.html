@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="background">
+    <p class="red-tag">
+        @if(comingSoon){
+            Coming Soon
+        }
+        @else {
+            Now Showing
+        }
+    </p>
+
+    <h1 class="type">
+        <span class="bold-type">
+            @if(comingSoon){
+                Coming
+            }
+            @else {
+                Now
+            }
+        </span>
+        @if(comingSoon){
+            Soon
+        }
+        @else {
+            Playing
+        }
+    </h1>
+</div>
+<div class="subcontainer">
+    <div class="movies-container">
+        <movie-item *ngFor="let movie of movies" [movie]="movie"> 
+        </movie-item>
+    </div>
+</div>
+<footer></footer>

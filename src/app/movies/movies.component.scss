@@ -1,0 +1,87 @@
+.background{
+    background-image: linear-gradient(to bottom, rgba(21, 32, 35,0.5) 0%, #152023 100%),
+		url("https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2019/12/theater-02.jpg");
+	background-size: cover;
+	background-position: 50%;
+	padding: 8rem;
+	@media (max-width: 585px) {
+		padding: 4rem;
+	}
+}
+
+.subcontainer{
+    margin-left: 8vw;
+	padding-left: 4vw;
+	@media (max-width: 720px) {
+		margin-left: 0;
+	}
+}
+
+.movies-container{
+    flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-top: 3rem;
+	column-count: 3;
+	justify-content: space-evenly;
+	width: 100%;
+	overflow: hidden;
+	@media (max-width: 855px) {
+		column-count: 2;
+		margin: auto;
+		width: 85%;
+	}
+
+	@media (max-width: 585px) {
+		column-count: 2;
+		margin: auto;
+		width: 100%;
+	}
+	@media (max-width: 380px) {
+		column-count: 1;
+		margin: auto;
+		width: 200px;
+		align-content: center;
+		justify-content: center;
+	}
+}
+
+.red-tag{
+    font-weight: bolder;
+	color: red;
+	text-transform: uppercase;
+	padding: 10px 0;
+	letter-spacing: 3px;
+	margin: 0;
+}
+
+.type{
+    color: #fff;
+	letter-spacing: 3px;
+	font-size: 6rem;
+	font-weight: lighter;
+	display: inline-block;
+	margin: 0;
+    line-height: 1;
+	@media (max-width: 1080px) {
+		font-size: 3rem;
+	}
+	@media (max-width: 720px) {
+		font-size: 2rem;
+	}
+}
+
+.bold-type{
+    font-weight: bold;
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 6rem;
+	display: inline-block;
+	margin: 0;
+	@media (max-width: 1080px) {
+		font-size: 3rem;
+	}
+	@media (max-width: 720px) {
+		font-size: 2rem;
+	}
+}
