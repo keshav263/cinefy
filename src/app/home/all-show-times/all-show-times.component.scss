@@ -7,7 +7,9 @@
 	@media (max-width: 480px) {
 		flex-direction: column;
 	}
+	margin:18vh 0;
 }
+
 
 .details-container{
     width: 30%;
@@ -109,10 +111,10 @@
 
 .image{
     width: 35%;
-	height: 15%;
+	height: 25%;
 	object-fit: cover;
 	filter: opacity(45%);
-	transform: translateY(-2rem);
+	transform: translateY(-5rem);
 	background: linear-gradient(to bottom, rgba(256, 256, 256, 0), #000),
 		url("https://image.freepik.com/free-vector/elegant-blurry-red-bokeh-lights-background_1017-25385.jpg");
 	position: absolute;

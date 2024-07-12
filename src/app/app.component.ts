@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FeatureComponent } from './home/featured/featured.component';
 import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
     RouterOutlet,
     HeaderComponent,
     FeatureComponent,
-    ComingSoonComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

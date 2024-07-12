@@ -1,0 +1,86 @@
+.container{
+    position: relative;
+	width: 100%;
+	margin-top: 20vh;
+	padding-bottom: 5vh;
+    display:flex;
+    justify-content: center;
+}
+
+.background-pic{
+    background-image: linear-gradient(
+			to bottom,
+			#152023,
+			rgba(21, 32, 35,0.4),
+			#152023
+		),
+		url("/assets/seats.png");
+	width: 100vw;
+	position: absolute;
+	height: 40vh;
+	background-size: cover;
+	background-blend-mode: hard-light;
+	filter: opacity(25%);
+	background-position: bottom;
+	/* transform: translateX(-14vw); */
+	z-index: 100;
+	bottom: 0;
+	@media (max-width: 720px) {
+		transform: none;
+		left: 0;
+	}
+}
+
+.text{
+    color: #fff;
+	margin: 5px 0;
+	font-size: 0.8rem;
+	font-weight: lighter;
+	word-wrap: break-word;
+	width: 100%;
+	@media (max-width: 585px) {
+		font-size: 0.6rem;
+	}
+}
+
+.red-tag{
+    font-weight: bolder;
+	color: red;
+	text-transform: uppercase;
+	padding: 10px 0;
+	letter-spacing: 3px;
+	margin: 0;
+}
+
+.grey-tag{
+    font-weight: bolder;
+	text-transform: uppercase;
+	padding: 10px 0;
+	letter-spacing: 3px;
+	margin: 0;
+    color: #6f6d6c;
+	font-size: 0.8rem;
+	@media (max-width: 585px) {
+		font-size: 0.6rem;
+	}
+}
+
+.footer-container{
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 1000;
+}
+
+
+.column{
+    z-index: 2;
+	margin: 2rem;
+	@media (max-width: 585px) {
+		margin: 2rem 1rem;
+	}
+	@media (max-width: 480px) {
+		margin: 2rem 0.7rem;
+		display: none;
+	}
+}
