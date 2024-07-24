@@ -1,4 +1,14 @@
-<div class="container" [style.background-image]="'url(https://image.tmdb.org/t/p/original' + (movie.backdrops[0]?.file_path || '') + ')'">
-    
+<div class="container" [style.background-image]="'url(https://image.tmdb.org/t/p/original' + (backdrops[0] || '') + ')'">
+    <app-header></app-header>
+    <div class="subcontainer">
+        <div class="empty-space"></div>
+        <h3 class="tagline">
+        {{movie.tagline}}
+        </h3>
+        <h2 class="title">
+        {{movie.title}}
+        </h2>
+        <button class="button">GET TICKETS</button>
+    </div>
+    <movie-details [movie]="movie" [cast]="cast" [backdrops]="backdrops" [crew]="crew"></movie-details>
 </div>
-  

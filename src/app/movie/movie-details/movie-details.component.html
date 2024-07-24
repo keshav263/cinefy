@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="subcontainer">
+        <div class="empty-space" [ngStyle]="{ 'height': getEmptySpaceHeight() }"></div>
+        <p class="text">
+            {{movie.overview}}
+        </p>
+        <p class="designation">
+            Directed by
+        </p>
+        <p class="text">
+            {{findDirectors()}}
+        </p>
+        <p class="designation">
+            Written by
+        </p>
+        <p class="text">
+            {{findWriter()}}
+        </p>
+        <p class="designation">
+            Produced by
+        </p>
+        <p class="text">
+            {{findProducers()}}
+        </p>
+        <p class="designation">
+            Cast
+        </p>
+        <div class="cast-list">
+        <div  *ngFor="let c of cast">
+            <cast-item [cast]="c"></cast-item>
+        </div>
+    </div>
+        <p class="designation">
+            Gallery
+        </p>
+    </div>
+</div>

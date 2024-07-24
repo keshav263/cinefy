@@ -10,6 +10,7 @@ export class Movie {
     public poster_path: string,
     public release_date: string,
     public title: string,
-    public vote_average: number
+    public vote_average: number,
+    public tagline:string
   ) {}
 }

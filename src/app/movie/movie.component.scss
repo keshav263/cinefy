@@ -9,3 +9,68 @@
 	overflow-x: hidden;
 	z-index: 1;
 }
+
+.empty-space{
+	height:35vh;
+}
+
+.subcontainer{
+	margin-left: 8vw;
+	padding-left: 4vw;
+	border-left: 1px rgba(256, 256, 256, 0.1) solid;
+	border-right: 1px rgba(256, 256, 256, 0.1) solid;
+	height: 100%;
+	display: inline-block;
+	width: 72vw;
+	box-sizing: border-box;
+	position: relative;
+	@media (max-width: 855px) {
+		width: 67vw;
+	}
+	@media (max-width: 720px) {
+		margin-left: 0;
+		width: 70vw;
+	}
+	@media (max-width: 585px) {
+		width: 100vw;
+		padding-left: 3rem;
+	}
+}
+
+.title{
+	font-size: 4rem;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	color: #fff;
+	margin: 0;
+	line-height: 1;
+	z-index: -1;
+	@media (max-width: 855px) {
+		font-size: 3rem;
+	}
+}
+
+.tagline{
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	line-height: 1;
+	margin: 0;
+	@media (max-width: 855px) {
+		font-size: 0.8rem;
+	}
+}
+
+.button{
+	margin-top: 10px;
+	padding: 10px 35px;
+	color: #fff;
+	border-color: #fff;
+	background: transparent;
+	letter-spacing: 3;
+	display:block;
+	@media (max-width: 855px) {
+		padding: 8px 30px;
+	}
+}
