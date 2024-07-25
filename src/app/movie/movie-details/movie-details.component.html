@@ -26,12 +26,19 @@
             Cast
         </p>
         <div class="cast-list">
-        <div  *ngFor="let c of cast">
+        <div style="height:100%" *ngFor="let c of cast">
             <cast-item [cast]="c"></cast-item>
         </div>
     </div>
         <p class="designation">
             Gallery
         </p>
+        <div class="images">
+            <img class="img" [src]="'https://image.tmdb.org/t/p/original' + backdrops[2]">
+            <img class="img" [src]="'https://image.tmdb.org/t/p/original' + backdrops[3]">
+            <img class="img" [src]="'https://image.tmdb.org/t/p/original' + backdrops[4]">
+            <img class="img" [src]="'https://image.tmdb.org/t/p/original' + backdrops[5]">
+            <img class="img" [src]="'https://image.tmdb.org/t/p/original' + backdrops[6]">
+        </div>
     </div>
 </div>

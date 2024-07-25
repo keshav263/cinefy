@@ -1,14 +1,35 @@
-<div class="container" [style.background-image]="'url(https://image.tmdb.org/t/p/original' + (backdrops[0] || '') + ')'">
-    <app-header></app-header>
-    <div class="subcontainer">
+<!-- Check if a trailer exists and display the trailer video if it does -->
+<div *ngIf="trailer; else content">
+    <iframe 
+      title="Trailer"
+      style="height:100vh;width:100vw"
+      allowfullscreen
+      [src]="getTrailerUrl() | safe"
+      frameborder="0"
+    ></iframe>
+  </div>
+  
+  <!-- Template to display when there is no trailer -->
+  <ng-template #content>
+    <div class="container" [style.background-image]="'url(https://image.tmdb.org/t/p/original' + (backdrops[0] || '') + ')'">
+      <app-header></app-header>
+      <div class="subcontainer">
+        <button class="back-button" mat-icon-button (click)="goBack()">
+          <mat-icon>west</mat-icon>
+        </button>
         <div class="empty-space"></div>
-        <h3 class="tagline">
-        {{movie.tagline}}
-        </h3>
-        <h2 class="title">
-        {{movie.title}}
-        </h2>
+        <h3 class="tagline">{{ movie.tagline }}</h3>
+        <h2 class="title">{{ movie.title }}</h2>
         <button class="button">GET TICKETS</button>
+        <div class="trailer-button" (click)="getVideo()">
+          <div class="third-layer">
+            <div class="second-layer">
+              <mat-icon style="font-size:56px;color:#fff;height:56px;width:56px;">play_arrow</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <movie-details [movie]="movie" [cast]="cast" [backdrops]="backdrops" [crew]="crew"></movie-details>
     </div>
-    <movie-details [movie]="movie" [cast]="cast" [backdrops]="backdrops" [crew]="crew"></movie-details>
-</div>
+  </ng-template>
+  

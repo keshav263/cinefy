@@ -1,9 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { MoviesService } from "../services/movie.service";
 import { Movie } from "../models/movie";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { HeaderComponent } from "../header/header.component";
 import { MovieDetailsComponent } from "./movie-details/movie-details.component";
+import { MatIconModule } from "@angular/material/icon";
+import { environment } from "../environment/environment";
+import { NgIf } from "@angular/common";
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
+import { SafePipe } from "../pipes/sanitise-pipe";
 
 
 @Component({
@@ -11,7 +16,7 @@ import { MovieDetailsComponent } from "./movie-details/movie-details.component";
     templateUrl: "./movie.component.html",
     styleUrls: ["./movie.component.scss"],
     standalone:true,
-    imports:[HeaderComponent,MovieDetailsComponent]
+    imports: [HeaderComponent, MovieDetailsComponent, MatIconModule, NgIf, SafePipe]
 })
 
 
@@ -21,11 +26,14 @@ export class MovieComponent implements OnInit {
     cast: any[] = [];
     crew: any[] = [];
     backdrops: String[] = [];
+    trailer:String="";
     
 
     constructor(
         private movieService: MoviesService,
-        private activatedRoute: ActivatedRoute
+        private activatedRoute: ActivatedRoute,
+        public router:Router,
+        private sanitizer: DomSanitizer
     ) {}
 
     ngOnInit(): void {
@@ -77,5 +85,25 @@ export class MovieComponent implements OnInit {
             }
         });
         console.log(this.backdrops)
+    }
+
+    async getVideo(){
+        const response = await fetch(
+			`https://api.themoviedb.org/3/movie/${this.movie.id}/videos?api_key=${environment.tmdbApiKey}&language=en-US`
+		);
+		const responseJson = await response.json();
+        this.trailer=responseJson.results[0].key;
+    }
+
+    getTrailerUrl() {
+        return `https://www.youtube.com/embed/${this.trailer}?rel=0&controls=0&showinfo=0&autoplay=1&loop=1&modestbranding=1&playlist=${this.trailer}&iv_load_policy=1&enablejsapi=1`;
+    }
+
+    async closeVideo(){
+        this.trailer=""
+    }
+
+    goBack(){
+        this.router.navigate(["/"])
     }
 }

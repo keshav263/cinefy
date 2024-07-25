@@ -4,7 +4,7 @@ header {
   display: flex;
   height: 100%;
   box-sizing: border-box;
-  width: 10vw;
+  width: 8vw;
   z-index: 1000;
   left: 0;
   top: 0;
@@ -20,7 +20,7 @@ header {
   position: absolute;
   bottom: 30px;
   display: flex;
-  width: 100px;
+  width: 100%;
   justify-self: center;
   align-items: center;
   flex-direction: column;
@@ -47,6 +47,14 @@ header {
   }
 }
 
+a{
+  cursor: pointer;
+}
+
 img {
-  width: 120px;
+  width: 80px;
+  margin-top:12px;
+  &:hover{
+    cursor: pointer;
+  }
 }

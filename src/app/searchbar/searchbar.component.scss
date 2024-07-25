@@ -1,0 +1,89 @@
+.container{
+    position: absolute;
+	right: 7rem;
+	overflow: hidden;
+	padding: 3rem 5px 0;
+	display: flex;
+	flex-direction: column;
+	height: 40vh;
+	@media (max-width: 855px) {
+		right: 2rem;
+	}
+	@media (max-width: 585px) {
+		width: 100vw;
+		position: static;
+		height: 5vh;
+	}
+}
+
+.input-container{
+    background-color: rgba(256, 256, 256, 1);
+	border-radius: 1rem;
+	width: 18rem;
+    padding-left:12px;
+    box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	position:relative;
+	@media (max-width: 585px) {
+		width: 90vw;
+	}
+	@media (max-width: 480px) {
+		width: 80vw;
+	}
+	@media (max-width: 585px) {
+		margin:0 auto;
+	}
+}
+
+input{
+    background-color: transparent;
+    border-radius: 18px;
+    width:100%;
+    padding:8px 12px;
+    border:none;
+    &:focus-visible{
+		outline:none;
+		border:none;
+	}
+    
+}
+
+.list{
+    position: absolute;
+    background-color: #fff;;
+	width: 18rem;
+    top:5rem;
+    max-height:12rem;
+    overflow-y: scroll;
+    border-radius:18px;
+	@media (max-width: 585px) {
+		width: 100vw !important;
+		margin:0 auto;
+	}
+	@media (max-width: 480px) {
+		width: 80vw !important;
+		display:flex;
+		flex-direction: column;
+		align-self: center;
+	}
+}
+
+.avatar{
+	border-radius:50%;
+	width:2rem;
+	height:2rem;
+}
+
+.empty-space{
+    height:10rem;
+}
+
+h5{
+	padding:0;
+	margin:0;
+	max-lines: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
